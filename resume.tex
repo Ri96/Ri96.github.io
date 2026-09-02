@@ -1,0 +1,156 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{tcolorbox}
+\usepackage{helvet}
+\usepackage{inconsolata}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Colors (Clean white background for ATS)
+\definecolor{obsidian}{HTML}{0B0F17}
+\definecolor{mutedslate}{HTML}{475569}
+\definecolor{neonemerald}{HTML}{059669}
+\definecolor{cyanhighlight}{HTML}{0284C7}
+
+\color{obsidian}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyanhighlight,
+    urlcolor=cyanhighlight,
+}
+
+% Custom Section Format (Terminal Style: // SECTION_NAME)
+\titleformat{\section}
+  {\Large\bfseries\color{obsidian}\ttfamily}
+  {}{0em}{// }[\vspace{-0.5em}{\color{neonemerald}\rule{0.25\textwidth}{2pt}}{\color{cyanhighlight}\rule{0.75\textwidth}{0.5pt}}]
+\titlespacing*{\section}{0pt}{2.5ex}{1.5ex}
+
+% Custom Lists (Terminal prompts as bullets)
+\setlist[itemize]{label={\color{neonemerald}\ttfamily >}, leftmargin=1.5em, itemsep=1.5pt, parsep=0pt}
+
+\begin{document}
+
+% ------------------------- HEADER -------------------------
+\begin{center}
+    {\Huge \textbf{\color{obsidian}Debarshi Sen}} \\[1ex]
+    {\Large \color{neonemerald}\ttfamily Senior Software Engineer III} \\[1.5ex]
+    {\small \color{mutedslate}
+    \faMapMarker\ Kolkata, West Bengal, India \quad $|$ \quad
+    \faPhone\ +91 8981602712 \quad $|$ \quad
+    \faEnvelope\ \href{mailto:d19sen@yahoo.com}{d19sen@yahoo.com} \\[0.5ex]
+    \faLinkedin\ \href{https://linkedin.com/in/d19sen}{linkedin.com/in/d19sen} \quad $|$ \quad
+    \faGithub\ \href{https://github.com/Ri96}{GitHub Profile}
+    }
+\end{center}
+
+\vspace{1ex}
+
+% ------------------------- SUMMARY -------------------------
+\section*{PROFESSIONAL\_SUMMARY}
+Results-driven Senior Full Stack Developer and Software Engineer with 8+ years of experience designing, architecting, and deploying scalable distributed systems, enterprise platforms, and cloud-native solutions across AWS and GCP. Specialized in high-throughput microservices, API security gateways, event-driven architectures, and modern web application development. Proven track record leading engineering teams, automating enterprise workflows, and resolving complex system bottlenecks.
+
+% ------------------------- TECH STACK -------------------------
+\section*{TECHNICAL\_STACK}
+\begin{itemize}[label={\color{cyanhighlight}\ttfamily \$}]
+    \item \textbf{Languages:} {\ttfamily TypeScript, JavaScript, Python, Java, PHP, HTML5/SCSS}
+    \item \textbf{Frontend Architecture:} {\ttfamily React.js, Next.js, Vue.js (Composition API, Router), Angular, Tailwind CSS}
+    \item \textbf{Backend \& Frameworks:} {\ttfamily Node.js, Express.js, FastAPI, Laravel, HCL Commerce+, Hive Router}
+    \item \textbf{Distributed Systems \& Architecture:} {\ttfamily Microservices, System Design, API Gateways, gRPC, WebSockets, RESTful APIs, GraphQL}
+    \item \textbf{Cloud \& DevOps:} {\ttfamily AWS (EC2, SQS, SES, Lambda, RDS, S3, Cognito), GCP (Pub/Sub, Cloud Tasks, Cloud SQL, GKE), Docker, GitHub Actions CI/CD, Linux/Bash}
+    \item \textbf{Databases \& Messaging:} {\ttfamily PostgreSQL, MySQL, MongoDB, Redis, Kafka, BullMQ, TypeORM, Drizzle ORM}
+    \item \textbf{Identity \& Security:} {\ttfamily Microsoft Entra ID (Azure AD), OAuth 2.0, SSO, Passport.js}
+\end{itemize}
+
+% ------------------------- EXPERIENCE -------------------------
+\section*{EXPERIENCE}
+
+\noindent\textbf{\color{obsidian}HCLSoftware} $|$ {\color{cyanhighlight}\textbf{Senior Software Engineer III}} \hfill {\small\ttfamily\color{mutedslate}April 2026 -- Present} \\
+{\small\textit{\color{mutedslate}Bengaluru, India}}
+\begin{itemize}
+    \item Spearheading scalable platform components, core API development, and enterprise integrations with HCL Commerce+ and Hive Router.
+    \item Profiling, debugging, and tuning distributed services to ensure optimal latency and high availability.
+\end{itemize}
+
+\vspace{1ex}
+\noindent\textbf{\color{obsidian}PwC Acceleration Centers} $|$ {\color{cyanhighlight}\textbf{Senior Associate III / Associate Developer}} \hfill {\small\ttfamily\color{mutedslate}August 2021 -- April 2026} \\
+{\small\textit{\color{mutedslate}Kolkata, India}}
+\begin{itemize}
+    \item Led a team of 4+ engineers; championed microservice best practices, automated CI/CD deployment pipelines via GitHub Actions, and reduced deployment cycle times by 50\%.
+    \item Architected an enterprise API Gateway integrated with Microsoft Entra ID (Azure AD) for secure, multi-tenant B2B integrations.
+    \item Designed and deployed an event-driven notification microservice leveraging GCP Pub/Sub and BullMQ, handling over 1M monthly messages and cutting processing latency by 40\%.
+    \item Implemented advanced multi-layer Redis caching strategies and optimized database schema queries for high-volume transactions.
+\end{itemize}
+
+\vspace{1ex}
+\noindent\textbf{\color{obsidian}CodeClouds} $|$ {\color{cyanhighlight}\textbf{Senior Software Developer \& Software Developer}} \hfill {\small\ttfamily\color{mutedslate}March 2019 -- August 2021} \\
+{\small\textit{\color{mutedslate}Kolkata, India}}
+\begin{itemize}
+    \item Built mission-critical analytics dashboards with React.js and Node.js APIs serving a 50K+ business user base.
+    \item Orchestrated legacy monolithic system migrations to modular microservices, enhancing platform maintainability.
+    \item Developed reusable Vue.js modules and robust Laravel backends; integrated direct third-party CRM APIs (Sticky.IO, Konnektive).
+\end{itemize}
+
+\vspace{1ex}
+\noindent\textbf{\color{obsidian}Xelpmoc Design \& Tech} $|$ {\color{cyanhighlight}\textbf{Software Engineer}} \hfill {\small\ttfamily\color{mutedslate}November 2018 -- March 2019} \\
+{\small\textit{\color{mutedslate}Kolkata, India}}
+\begin{itemize}
+    \item Developed high-performance REST APIs and Angular UI components for a digital parenting consumer platform.
+    \item Diagnosed critical performance bottlenecks and participated in Agile sprint delivery.
+\end{itemize}
+
+\vspace{1ex}
+\noindent\textbf{\color{obsidian}Eleven -- Digital \& Marketing Agency} $|$ {\color{cyanhighlight}\textbf{Full Stack Developer \& Project Manager}} \hfill {\small\ttfamily\color{mutedslate}October 2017 -- October 2018} \\
+{\small\textit{\color{mutedslate}Kolkata, India}}
+\begin{itemize}
+    \item Managed project lifecycles, translating product roadmaps into functional web features and handling client-facing deployments.
+\end{itemize}
+
+\vspace{1ex}
+\noindent\textbf{\color{obsidian}Sterling AG} $|$ {\color{cyanhighlight}\textbf{Full Stack Developer \& Front End Developer}} \hfill {\small\ttfamily\color{mutedslate}March 2016 -- October 2017} \\
+{\small\textit{\color{mutedslate}Kolkata, India}}
+\begin{itemize}
+    \item Spearheaded early-stage web applications from MVP to production, cutting client time-to-market by 30\%.
+    \item Managed AWS-based cloud deployments, relational database schemas, and responsive UI components.
+\end{itemize}
+
+% ------------------------- PROJECTS -------------------------
+\section*{NOTABLE\_PROJECTS}
+\begin{itemize}
+    \item \textbf{Distributed Enterprise Notification Platform (PwC):} Scaled a distributed message processing engine using GCP Pub/Sub and BullMQ processing 1M+ messages/month.
+    \item \textbf{Enterprise API Security Gateway:} Engineered secure API gateway with Microsoft Entra ID and OAuth, enforcing strict role-based access control (RBAC).
+    \item \textbf{High-Throughput Analytics Dashboards:} Architected low-latency monitoring and data visualization interfaces serving 50,000+ active users.
+\end{itemize}
+
+% ------------------------- HONORS & CERTIFICATIONS -------------------------
+\section*{HONORS\_AND\_AWARDS}
+\noindent\textbf{\color{obsidian}Honors \& Awards:}
+\begin{itemize}
+    \item Knowledge Accelerator Award -- PwC AC (2024)
+    \item Territory Spot Award -- PwC AC (2023)
+    \item Bright Beginner - LoS Award -- PwC AC (2022)
+    \item 2nd Place -- Hackathon @ B.P. Poddar Institute (2016)
+    \item 3rd Place -- 404: Page Not Found @ Techno India (2014)
+\end{itemize}
+
+\vspace{1ex}
+\noindent\textbf{\color{obsidian}Certifications:}
+\begin{itemize}
+    \item Vue --- The Complete Guide (incl.\ Router \& Composition API)
+    \item The Complete Developers Guide to MongoDB
+    \item The Complete Python Bootcamp: From Zero to Hero in Python
+    \item PHP with Laravel for Beginners --- Master in Laravel
+\end{itemize}
+
+% ------------------------- EDUCATION -------------------------
+\section*{EDUCATION}
+\noindent\textbf{\color{obsidian}Bachelor of Computer Applications (BCA)} \hfill {\small\ttfamily\color{mutedslate}Graduated: 2018} \\
+{\small\textit{\color{mutedslate}Techno India Saltlake / Maulana Abul Kalam Azad University of Technology (MAKAUT)}} \\
+{\small\color{mutedslate}Focus: Computer \& Information Systems Security}
+
+\end{document}
