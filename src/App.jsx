@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Terminal, User, Code, Briefcase, Mail, Phone, Download, MapPin, 
-  Copy, Check, ExternalLink, Award, FileBadge, ChevronRight 
+  Copy, Check, ExternalLink, Award, FileBadge, ChevronRight, GitBranch, LayoutGrid
 } from 'lucide-react';
 
 const MouseTrailer = () => {
@@ -71,7 +71,7 @@ const TerminalSection = () => {
           response = 'Debarshi Sen — Senior Software Engineer III @ HCLSoftware. Deploying high-throughput services & solving hard bugs.';
           break;
         case 'stack':
-          response = 'TypeScript, Python, PHP, Vue.js, Laravel, React, MongoDB...';
+          response = 'TypeScript, React.js, Node.js, Python, AWS, GCP, Microservices...';
           break;
         case 'experience':
           response = 'HCLSoftware (2026-Present) | PwC (2021-2026) | CodeClouds (2019-2021)';
@@ -268,13 +268,13 @@ function App() {
             <TimelineItem 
               company="PwC Acceleration Centers"
               period="2021 - 2026"
-              role="Senior Associate III (Started as Associate II)"
-              tags={["Awarded Bright Beginner LoS", "Territory Spot Awards"]}
+              role="Senior Associate III / Associate Developer"
+              tags={["Bright Beginner LoS Award", "Territory Spot Award"]}
             />
             <TimelineItem 
               company="CodeClouds"
               period="2019 - 2021"
-              role="Senior Software Developer (Started as Software Developer)"
+              role="Senior Software Developer & Software Developer"
             />
             <TimelineItem 
               company="Xelpmoc Design & Tech"
@@ -282,9 +282,9 @@ function App() {
               role="Software Engineer"
             />
             <TimelineItem 
-              company="Eleven & Sterling AG"
-              period="2016 - 2018"
-              role="Full Stack & Frontend Developer"
+              company="Sterling AG"
+              period="2016 - 2017"
+              role="Full Stack Developer & Front End Developer"
               isLast={true}
             />
           </div>
@@ -299,27 +299,81 @@ function App() {
             <span className="glow-cyan">Tech_Matrix.cfg</span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <TechCard 
-              title="CORE_LANGUAGES_WEB" 
-              skills={['TypeScript', 'Python', 'PHP', 'JavaScript', 'HTML5/CSS3']} 
+              title="LANGUAGES" 
+              skills={['TypeScript', 'JavaScript', 'Python', 'Java', 'PHP', 'HTML5/SCSS']} 
               delay={0.1}
             />
             <TechCard 
-              title="FRAMEWORKS_ECOSYSTEMS" 
-              skills={['Vue.js (Composition API)', 'Laravel', 'React', 'FastAPIs']} 
+              title="FRONTEND_ARCH" 
+              skills={['React.js', 'Next.js', 'Vue.js', 'Angular', 'Tailwind CSS']} 
               delay={0.2}
             />
             <TechCard 
-              title="COMMERCE_ENTERPRISE" 
-              skills={['HCL Commerce+', 'Hive Router']} 
+              title="BACKEND_FRAMEWORKS" 
+              skills={['Node.js', 'Express.js', 'FastAPI', 'Laravel', 'HCL Commerce+', 'Hive Router']} 
               delay={0.3}
             />
             <TechCard 
-              title="DATABASES_CLOUD" 
-              skills={['MongoDB', 'REST APIs', 'Microservices', 'Cloud Server Mgmt']} 
+              title="DISTRIBUTED_SYSTEMS" 
+              skills={['Microservices', 'System Design', 'API Gateways', 'gRPC', 'WebSockets', 'REST', 'GraphQL']} 
               delay={0.4}
             />
+            <TechCard 
+              title="CLOUD_DEVOPS" 
+              skills={['AWS', 'GCP', 'Docker', 'GitHub Actions', 'Linux/Bash']} 
+              delay={0.5}
+            />
+            <TechCard 
+              title="DATA_MESSAGING" 
+              skills={['PostgreSQL', 'MongoDB', 'Redis', 'Kafka', 'BullMQ', 'ORM']} 
+              delay={0.6}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Notable Projects */}
+      <section className="relative z-10 px-6 sm:px-12 md:px-24 py-20 bg-slate-950/50 border-t border-slate-800">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 flex items-center text-slate-100">
+            <LayoutGrid className="w-8 h-8 mr-4 text-emerald-500" /> 
+            <span className="glow-emerald">Notable_Projects.exe</span>
+          </h2>
+          
+          <div className="space-y-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-slate-900/60 border border-slate-700 p-6 rounded-lg hover:border-emerald-500/50 transition-colors group"
+            >
+              <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-emerald-400 transition-colors">Distributed Enterprise Notification Platform (PwC)</h3>
+              <p className="text-slate-400">Scaled a distributed message processing engine using GCP Pub/Sub and BullMQ processing 1M+ messages/month.</p>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-slate-900/60 border border-slate-700 p-6 rounded-lg hover:border-emerald-500/50 transition-colors group"
+            >
+              <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-emerald-400 transition-colors">Enterprise API Security Gateway</h3>
+              <p className="text-slate-400">Engineered secure API gateway with Microsoft Entra ID and OAuth, enforcing strict role-based access control (RBAC).</p>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-slate-900/60 border border-slate-700 p-6 rounded-lg hover:border-emerald-500/50 transition-colors group"
+            >
+              <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-emerald-400 transition-colors">High-Throughput Analytics Dashboards</h3>
+              <p className="text-slate-400">Architected low-latency monitoring and data visualization interfaces serving 50,000+ active users.</p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -334,7 +388,7 @@ function App() {
               <span className="glow-amber">Certifications</span>
             </h2>
             <ul className="space-y-4">
-              {['Vue.js Complete Guide', 'Complete Developers Guide to MongoDB', 'Complete Python Bootcamp', 'Master Laravel Suite'].map((cert, i) => (
+              {['Vue — The Complete Guide', 'The Complete Developers Guide to MongoDB', 'Complete Python Bootcamp', 'PHP with Laravel for Beginners'].map((cert, i) => (
                 <li key={i} className="flex items-start bg-slate-900 p-4 rounded-lg border border-slate-800 hover:border-amber-500/50 transition-colors">
                   <Check className="w-5 h-5 text-amber-500 mr-3 shrink-0 mt-0.5" />
                   <span className="text-slate-300">{cert}</span>
@@ -346,19 +400,23 @@ function App() {
           <div>
             <h2 className="text-2xl font-bold mb-8 flex items-center text-slate-100">
               <Award className="w-6 h-6 mr-3 text-amber-500" /> 
-              <span className="glow-amber">Education & Recognition</span>
+              <span className="glow-amber">Education & Honors</span>
             </h2>
             
             <div className="bg-slate-900 p-6 rounded-lg border border-slate-800 mb-6 hover:border-amber-500/50 transition-colors">
               <h4 className="text-amber-400 font-mono mb-2">/edu/MAKAUT</h4>
-              <p className="text-slate-300">Bachelor of Computer Applications (BCA)</p>
+              <p className="text-slate-300 font-bold">Bachelor of Computer Applications (BCA)</p>
+              <p className="text-slate-400 text-sm mt-1">Techno India Saltlake / MAKAUT</p>
             </div>
             
             <div className="bg-slate-900 p-6 rounded-lg border border-slate-800 hover:border-amber-500/50 transition-colors">
-              <h4 className="text-amber-400 font-mono mb-2">/awards/PwC</h4>
-              <ul className="space-y-2 text-slate-300 list-disc list-inside">
-                <li>Bright Beginner - LoS Award</li>
-                <li>Territory Spot Award</li>
+              <h4 className="text-amber-400 font-mono mb-2">/awards</h4>
+              <ul className="space-y-2 text-slate-300 list-disc list-inside text-sm">
+                <li>Knowledge Accelerator Award (2024)</li>
+                <li>Territory Spot Award (2023)</li>
+                <li>Bright Beginner - LoS Award (2022)</li>
+                <li>2nd Place - Hackathon (2016)</li>
+                <li>3rd Place - 404: Page Not Found (2014)</li>
               </ul>
             </div>
           </div>
@@ -382,20 +440,29 @@ function App() {
             <CopyButton text="+91 89816 02712" value="+91 89816 02712" />
           </div>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
               href="https://linkedin.com/in/d19sen" 
               target="_blank" 
               rel="noreferrer"
-              className="flex items-center px-8 py-3 bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-bold rounded-full transition-colors glow-cyan"
+              className="flex items-center px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-slate-950 font-bold rounded-full transition-colors glow-cyan"
             >
               <ExternalLink className="w-5 h-5 mr-2" /> LinkedIn Profile
+            </a>
+
+            <a 
+              href="https://github.com/Ri96" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-100 font-bold rounded-full transition-colors border border-slate-600 hover:border-slate-400"
+            >
+              <GitBranch className="w-5 h-5 mr-2" /> GitHub
             </a>
             
             <a 
               href="./Resume-GitHub.pdf" 
               download="Resume-GitHub.pdf"
-              className="flex items-center px-8 py-3 bg-transparent border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 font-bold rounded-full transition-colors"
+              className="flex items-center px-6 py-3 bg-transparent border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 font-bold rounded-full transition-colors"
             >
               <Download className="w-5 h-5 mr-2" /> Resume.pdf
             </a>
